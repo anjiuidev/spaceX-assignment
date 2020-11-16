@@ -22,4 +22,4 @@ App component is the root component for the other components.
 Filters component is responsible for all the filters.
 Main component is responsible for loading the data.
 
-
+The performance report is added [here](https://github.com/anjiuidev/spaceX-assignment/blob/main/spaceX-launches-report.pdf).
