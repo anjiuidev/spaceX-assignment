@@ -1,0 +1,21 @@
+<div class="filters-block">
+    <h4>Filters</h4>
+    <div class="launch-year">
+        <h5>Launch Year</h5>
+        <ul class="clearfix">
+            <li *ngFor="let year of years" [class.active]="launchYear == year" (click)="yearChange(year)">{{year}}</li>
+        </ul>
+    </div>
+    <div class="launch-year">
+        <h5>Successful Launch</h5>
+        <ul class="clearfix">
+            <li *ngFor="let launch of ['True', 'False']" [class.active]="successfulLaunch == launch.toLowerCase()" (click)="launchChange(launch)">{{launch}}</li>
+        </ul>
+    </div>
+    <div class="launch-year">
+        <h5>Successful Landing</h5>
+        <ul class="clearfix">
+            <li *ngFor="let landing of ['True', 'False']" [class.active]="successfulLanding == landing.toLowerCase()" (click)="landingChange(landing)">{{landing}}</li>
+        </ul>
+    </div>
+</div>

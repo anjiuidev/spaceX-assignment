@@ -1,0 +1,32 @@
+.container{
+    max-width: 1440px;
+    margin: auto;
+}
+main {
+    display: flex;
+    margin-top: 10px;
+    app-filters{
+        width: 230px;
+        margin-right: 20px;
+    }
+    aside{
+        flex: 1;
+    }
+}
+
+footer{
+    text-align: center;
+    margin: 20px 0;
+}
+
+@media only screen and (max-width: 700px) {
+    .container{
+        max-width: 400px;
+    }
+    main {
+        display: block;
+        app-filters{
+            width: 100%;
+        }
+    }
+}

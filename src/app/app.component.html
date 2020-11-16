@@ -1,0 +1,21 @@
+<div class="container">
+  <header>
+    <h2>{{title}}</h2>
+  </header>
+  <main>
+    <app-filters 
+      [launchYear]="launchYear"
+      [successfulLaunch]="successfulLaunch"
+      [successfulLanding]="successfulLanding"
+      (onYearChange)="yearChange($event)"
+      (onLaunchChange)="launchChange($event)"
+      (onLandingChange)="landingChange($event)"></app-filters>
+    <aside>
+      <app-main 
+        [launches]="launches"></app-main>
+      <footer>
+        <p><strong>Developed by:</strong> Anjaneyulu Reddy Singavaram(Anji)</p>
+      </footer>
+    </aside>
+  </main>
+</div>

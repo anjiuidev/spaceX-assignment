@@ -1,0 +1,25 @@
+<div class="launches-wrap">
+    <div class="launch-block" *ngFor="let launch of launches">
+        <div class="launch-item">
+            <figure>
+                <img [src]="launch?.links?.mission_patch_small" [alt]="launch?.mission_name">
+            </figure>
+            <h3>{{launch?.mission_name}} # {{launch?.flight_number}}</h3>
+            <div><strong>Mission Ids:</strong>
+                <ul>
+                    <li *ngFor="let id of launch?.mission_id">{{id}}</li>
+                </ul>
+            </div>
+            <p>
+                <strong>Launch Year:</strong> {{launch?.launch_year}}
+            </p>
+            <p>
+                <strong>Successful Launch:</strong> {{launch?.launch_success}}
+            </p>
+            <p>
+                <strong>Successful landing:</strong> {{launch?.land_success || launch?.launch_landing}}
+            </p>
+        </div>
+    </div>
+    <div *ngIf="!launches?.length">No space Launches available.</div>
+</div>
